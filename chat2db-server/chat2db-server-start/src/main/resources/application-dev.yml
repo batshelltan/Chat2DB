@@ -1,15 +1,11 @@
 spring:
   datasource:
     # 配置自带数据库的相对路径
-    url: jdbc:h2:~/.chat2db/db/chat2db_dev;FILE_LOCK=NO;MODE=MYSQL
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2
-      settings:
-        trace: true
-        web-allow-others: true
+    #url: jdbc:h2:~/.chat2db/db/chat2db_dev;FILE_LOCK=NO;MODE=MYSQL
+    url: jdbc:mysql://localhost:3306/chat2db?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: tan12345
+    driver-class-name: com.mysql.jdbc.Driver
 # 端口号
 server:
   port: 10821

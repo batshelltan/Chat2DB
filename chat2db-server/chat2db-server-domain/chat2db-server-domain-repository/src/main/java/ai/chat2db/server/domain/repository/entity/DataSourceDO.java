@@ -1,6 +1,7 @@
 package ai.chat2db.server.domain.repository.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
@@ -92,7 +93,8 @@ public class DataSourceDO implements Serializable {
     /**
      * ssl配置信息json
      */
-    private String ssl;
+    @TableField("c_ssl")
+    private String cssl;
 
     /**
      * sid
@@ -139,4 +141,11 @@ public class DataSourceDO implements Serializable {
      */
     private String serviceType;
 
+    public String getSsl() {
+        return this.cssl;
+    }
+
+    public void setSsl(String ssl) {
+        this.cssl = ssl;
+    }
 }
