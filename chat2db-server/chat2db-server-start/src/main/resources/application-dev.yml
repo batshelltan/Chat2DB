@@ -14,3 +14,8 @@ chat2db:
   gateway:
     base-url: http://test.sqlgpt.cn/gateway
     model-base-url: http://test.sqlgpt.cn/gateway
+management:
+  endpoints:
+    web:
+      exposure:
+        include: startup
